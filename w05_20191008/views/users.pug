@@ -1,0 +1,15 @@
+﻿extends layout
+
+block header
+    include header
+block content
+    h1 Users
+    table(class="table")
+        thead
+            th user _id
+            th username
+        tbody
+            each user in allAccounts
+                tr
+                    td #{user._id}
+                    td #{user.username}

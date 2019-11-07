@@ -1,0 +1,18 @@
+﻿extends layout
+
+block header
+    include header
+block content
+    a(href='/products' title='ListProducts') List Products
+    h1 Add A New Product
+    form(method='post' action='/products/add')
+        div
+            lable Title
+            input(name='title' required placeholder='Title')
+        div
+            lable Description
+            input(name='description' required placeholder='Description')
+        div
+            lable Price
+            input(name='price' required placeholder='Description' type=number)
+        input(type='submit' value='Add Product')
